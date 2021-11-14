@@ -3,15 +3,42 @@ const Schema = mongoose.Schema;
 
 const workoutSchema = new Schema({
     day: {
-        //code here look at seeder file
-        // mongoose docs on models
+      type: Date,
+      default: Date.now,
     },
     exercises: [
-        {
-            //code here
+      {
+        type: {
+          type: String,
+          trim: true,
+          required: "Enter type of exercise",
         },
+        name: {
+          type: String,
+          trim: true,
+          required: "Enter name of exercise",
+        },
+        duration: {
+          type: Number,
+          required: "Enter exercise duration in minutes",
+        },
+        weight: {
+          type: Number,
+          trim: true,
+        },
+        reps: {
+          type: Number,
+        },
+        sets: {
+          type: Number,
+        },
+        distance: {
+          type: Number,
+        },
+      },
     ],
-});
+  });
+  
 
 const Workout = mongoose.model("Workout", workoutSchema);
 
