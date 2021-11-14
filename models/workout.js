@@ -3,7 +3,8 @@ const Schema = mongoose.Schema;
 
 const workoutSchema = new Schema({
     day: {
-        //code here
+        //code here look at seeder file
+        // mongoose docs on models
     },
     exercises: [
         {
